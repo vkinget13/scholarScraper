@@ -34,7 +34,7 @@ while True:
             actions.move_to_element(citeButton).perform()
             citeButton.click()
             time.sleep(1)
-
+#close the citation pop up window 
             box = driver.find_element(By.CSS_SELECTOR,"div#gs_cit-bdy")
             print(box.text)
             close = driver.find_element(By.CSS_SELECTOR,"a#gs_cit-x")
@@ -43,7 +43,7 @@ while True:
             time.sleep(1)
         except Exception as e:
             print("error getting citation {e}")
-
+#go to next page using the next button 
     try:
         nextButton = driver.find_elements(By.CSS_SELECTOR,'td a b')
         print(len(nextButton))
