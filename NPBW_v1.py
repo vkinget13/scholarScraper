@@ -67,14 +67,14 @@ while True:
         #append data to excel worksheet
         ws.append([resultText, pdfUrl, citationText])
 
-    #try:
-     #   nextButton = driver.find_elements(By.CSS_SELECTOR,'td a b')
-      #  print(len(nextButton))
-       # nextButton = nextButton[0]
-        #nextButton.click()
-    #except Exception as e:
-     #   print("no more pages")
-      #  break
+    try:
+        nextButton = driver.find_elements(By.CSS_SELECTOR,'td a b')
+        print(len(nextButton))
+        nextButton = nextButton[0]
+        nextButton.click()
+    except Exception as e:
+        print("no more pages")
+        break
 
 #saving excel file
     excelName = "NPBW_Onderzoek_inventaris.xlsx"
